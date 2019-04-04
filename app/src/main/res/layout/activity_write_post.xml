@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Write_postActivity"
+    android:background="@color/skyblue"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/txtwritestatus"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/grey"
+        android:backgroundTint="@color/grey"
+        android:hint="@string/status"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btnpost"
+        android:layout_below="@id/txtwritestatus"
+        android:layout_width="match_parent"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:text="Poster"
+        android:gravity="center"/>
+</RelativeLayout>

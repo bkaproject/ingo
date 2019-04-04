@@ -1,0 +1,205 @@
+<resources>
+    <string name="app_name">OnGo</string>
+
+    //for facebook
+    <string name="FACEBOOK_APP_ID">335550237245274</string>
+    <string name="fb_login_protocol_scheme">fb335550237245274</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">[ACCOUNT_KIT_CLIENT_TOKEN]</string>
+
+
+    <string name="google_maps_API_key">AIzaSyAf-k0QCrOuhj2pHqOe0bwcWvxZhwpdDgI</string>
+    <string name="map_enter">"Entrer votre adresse, ville ou code postal"</string>
+    <string name="emailE">E-mail</string>
+    <string name="adresseE">Adresse de messagerie</string>
+    <string name="name">on décale!</string>
+    <string name="history">Historique</string>
+    <string name="contact">Contacter nous!</string>
+    <string name="about">A propos</string>
+
+    //authentification
+    <string name="signin">SUIVANT</string>
+    <string name="signup">INSCRIPTION</string>
+    <string name="mobile">Téléphone mobile</string>
+    <string name="phone">Numero de téléphone</string>
+    <string name="password">Entrer votre mot de passe</string>
+    <string name="cface">CONTINUER AVEC FACEBOOK</string>
+    <string name="cgoogle">CONTINUER AVEC GOOGLE</string>
+    <string name="txtconfirm">Un code de confirmation vous sera envoyé par SMS \n veuillez le saisir</string>
+    <string name="txtRetry">"vous n'avez rien recu? " </string>
+    <string name="txtRetry1">Renvoyer le code</string>
+    <string name="term">"vous etes entrain d'accepter nos "</string>
+    <string name="term1"> <u>Termes et conditions</u> </string>
+    <string name="codeconfirm">code de confirmation</string>
+    <string name="aboutyou">A propos de moi</string>
+    <string name="infossup">Informations supplémentaires</string>
+    <string name="coment">ENTRER UN STATUT</string>
+    <string name="firstName">Nom</string>
+    <string name="lastName">Prénom</string>
+    <string name="username">"Nom d'utilisateur"</string>
+    <string name="email"> Adresse email :</string>
+    <string name="born1">Date de naissance</string>
+    <string name="born">Date de naissance :</string>
+    <string name="adresse">Adresse :</string>
+    <string name="tel">Telephone :</string>
+    <string name="cni1">Numero CNI</string>
+    <string name="cni">Numero CNI :</string>
+    <string name="save">se souvenir de moi</string>
+    <string name="inscript">Inscription</string>
+    <string name="inscription">inscription</string>
+    <string name="infosp"> Information personnelle</string>
+    <string name="pref">Préférence</string>
+    <string name="sup">">"</string>
+    <string name="myadress">Mes adresses</string>
+    <string name="trajet">Mon trojet habituel</string>
+    <string name="choose">Changer cette photo</string>
+    <string name="genre">Genre</string>
+    <string name="occupation">Occupation</string>
+    <string name="saveInfos">Enregistrer les informations</string>
+    <string name="saveAdress">"Enregistrer l'adresse"</string>
+    <string name="saveEmail">"Enregistrer l'e-mail"</string>
+    <string name="saveNumber">Enregistrer le numéro de telephone</string>
+
+    <string name="discussion"> Discussion </string>
+    <string name="aime">"J'aime bien "</string>
+    <string name="aimePas">"J'aime pas"</string>
+    <string name="unknow">"Ca depend de mon humeur"</string>
+    <string name="cigarette"> Cigarette </string>
+    <string name="cigaretteOui">"Me derange"</string>
+    <string name="cigaretteNon">"Ne me dérange pas"</string>
+    <string name="musique"> Musique </string>
+    <string name="jePeux">"Je peux"</string>
+    <string name="jePeuxPas">"Je peux pas"</string>
+    <string name="Object"> Object ou Animaux </string>
+
+    <string name="title_activity_dash_board">dashBoard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+
+    //navigation
+    <string name="home">Accueil</string>
+    <string name="travel">Voyage</string>
+    <string name="reserve">Reservation</string>
+    <string name="tchat">Messagerie</string>
+    <string name="activity">activités</string>
+    <string name="process"> en cours</string>
+    <string name="setting">Paramètre</string>
+    <string name="logout">Déconnexion</string>
+
+    /appbar title
+    <string-array name="nav_item_activity_titles">
+        <item>Accueil</item>
+        <item>Voyage</item>
+        <item>Reservation</item>
+        <item>Messagerie</item>
+        <item>Paramètre</item>
+        <item>Déconnexion</item>
+    </string-array>
+
+    //fonction
+    <string-array name="fonction">
+        <item>Débutant</item>
+        <item>Intermétidiare</item>
+        <item>Avancé</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Conducteur</item>
+        <item>Passager</item>
+    </string-array>
+
+    <string-array name="discussion">
+        <item>"j'aime bien"</item>
+        <item>"J'aime pas"</item>
+        <item>"Ca depend de mon humeur"</item>
+    </string-array>
+
+    <string-array name="musique">
+        <item>"j'aime bien"</item>
+        <item>"J'aime pas"</item>
+        <item>"Ca depend de mon humeur"</item>
+    </string-array>
+
+    <string-array name="cigarette">
+        <item>La cigarette me dérange</item>
+        <item>La cigarette ne me dérange</item>
+    </string-array>
+
+    <string-array name="animaux">
+        <item>je peux accepter</item>
+        <item>je veux pas</item>
+        <item>"Ca depend de mon humeur"</item>
+    </string-array>
+
+    //region
+    <string-array name="region">
+        <item>Adamaoua</item>
+        <item>Centre</item>
+        <item>Est</item>
+        <item>Extreme-Nord</item>
+        <item>Littoral</item>
+        <item>Nord</item>
+        <item>Nord-Ouest</item>
+        <item>Ouest</item>
+        <item>Sud</item>
+        <item>Sud-Ouest</item>
+    </string-array>
+
+    //place
+    <string-array name="place">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    //voyage
+    <string name="start"> Lieu de départ </string>
+    <string name="end"> "Lieu d'arrivée" </string>
+    <string name="date"> Date du voyage </string>
+    <string name="hourD">"Heure de départ"</string>
+    <string name="hourA">"Heure d'arrivée"</string>
+    <string name="cout">Prix</string>
+    <string name="fonction">"Sur ce trajet, je serais :"</string>
+    <string name="place">place</string>
+    <string name="submit">Soumettre</string>
+
+    //reservation
+    <string name="startr">Départ :</string>
+    <string name="endr">Arrivé :</string>
+    <string name="hourRD">"Heure de départ :"</string>
+    <string name="hourRA">"Heure d'arrivée :"</string>
+    <string name="regionSelect"> "choisissez une region :" </string>
+    <string name="person"> "nombres de places a reserver :" </string>
+
+    //profil
+    <string name="detail">Détails</string>
+    <string name="payment">Mode de payement</string>
+    <string name="profile"> Niveau du profil :</string>
+    <string name="profil"> Nom de profil</string>
+    <string name="edit">Mon compte</string>
+    <string name="editCNI">Identification de la CNI</string>
+    <string name="conducteur">Conducteur</string>
+    <string name="Passager">Passager</string>
+    <string name="ok">valider</string>
+
+    //Home cardView
+    <string name="status"> Ajouter une legende </string>
+    <string name="like">" j'aime "</string>
+    <string name="heur">heure</string>
+    <string name="text"> "Très beau voyage Douala-kribi accompagné de mes collègue de travail"</string>
+    <string name="comment">Commentaire</string>
+
+    //bottom sheet
+    <string name="Modifier">Modifier</string>
+    <string name="Supprimer">Supprimer</string>
+    <string name="Anuuler">Anuuler</string>
+
+</resources>

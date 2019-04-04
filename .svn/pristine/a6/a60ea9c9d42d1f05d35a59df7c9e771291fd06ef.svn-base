@@ -1,0 +1,32 @@
+package com.cavalerie.vlc123.gogogo.Activity;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+import com.cavalerie.vlc123.gogogo.R;
+
+import static com.cavalerie.vlc123.gogogo.Activity.LoginActivity.uptodown;
+
+public class Sign2Activity extends AppCompatActivity {
+
+    ImageView logo2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sign2);
+
+        //find id
+        logo2 = (ImageView) findViewById(R.id.logo2);
+
+        //animation
+        logo2.startAnimation(uptodown);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //désactiver le retour au splashScreen
+        moveTaskToBack(true);
+    }
+}

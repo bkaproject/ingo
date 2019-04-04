@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="my_images"
+        path="Android/data/com.cavalerie.vlc123.gogogo/files/pictures"/>
+    <external-path name="my_images" path="Android/data/com.cavalerie.vlc123.gogogo/files/Pictures" />
+</paths>

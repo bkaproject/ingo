@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jaychang:simplerecyclerview-2.0.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simplerecyclerview-2.0.5.aar/bee5d49b943eff61e7754aa9930da701/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/simplerecyclerview-2.0.5.aar/bee5d49b943eff61e7754aa9930da701/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaychang/simplerecyclerview/2.0.5/7a2ea6c291bbea126199714355d55b36a818334/simplerecyclerview-2.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

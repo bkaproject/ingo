@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Dashboard_fragment.VoyageFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@color/grey"
+                android:elevation="5dp">
+
+            </com.google.android.gms.maps.MapView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/grey"
+                android:layout_weight="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/start"
+                            android:layout_weight="0.1"
+                            android:tint="@color/skyblue"
+                            android:layout_marginRight="10dp"/>
+
+                        <EditText
+                            android:id="@+id/txtstart"
+                            android:hint="@string/start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.9"
+                            android:background="@color/white"
+                            android:inputType="text"
+                            android:clickable="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/end"
+                            android:layout_weight="0.1"
+                            android:layout_marginRight="10dp"
+                            android:tint="@color/skyblue"/>
+
+                        <EditText
+                            android:id="@+id/txtend"
+                            android:hint="@string/end"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:inputType="text"
+                            android:layout_weight="1.9"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/dater"
+                            android:layout_weight="0.1"
+                            android:layout_marginRight="10dp"
+                            android:tint="@color/skyblue"/>
+
+                        <!-- EditText
+                            android:id="@+id/txtdate"
+                            android:hint="@string/date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.9"
+                            android:inputType="none"/> -->
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                                android:id="@+id/spdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/date"
+                                android:layout_weight="1.9"
+                                android:background="@color/white"/>
+
+                            <android.widget.TextView
+                                android:id="@+id/tvInvisibleError"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_alignRight="@+id/spdate"
+                                android:layout_alignBottom="@+id/spdate"
+                                android:layout_marginTop="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingRight="50dp"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/hour"
+                            android:layout_weight="0.1"
+                            android:tint="@color/skyblue"
+                            android:layout_marginRight="10dp"/>
+
+                        <EditText
+                            android:id="@+id/txthourD"
+                            android:hint="@string/hourD"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="time"
+                            android:background="@color/white"
+                            android:layout_weight="1.9"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/houra"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.1"
+                            android:tint="@color/skyblue"/>
+
+                        <EditText
+                            android:id="@+id/txthourA"
+                            android:hint="@string/hourA"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="time"
+                            android:background="@color/white"
+                            android:layout_weight="1.9"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/fonction"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.1"
+                            android:tint="@color/skyblue"/>
+
+                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                            android:id="@+id/spfonction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.9"
+                            
+                            android:hint="@string/fonction"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/places"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.1"
+                            android:tint="@color/skyblue"/>
+
+                        <EditText
+                            android:id="@+id/place"
+                            android:hint="@string/place"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:inputType="time"
+                            android:layout_weight="1.9"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/moneey"
+                            android:layout_weight="0.1"
+                            android:tint="@color/skyblue"
+                            android:layout_marginRight="10dp"/>
+
+                        <EditText
+                            android:id="@+id/price"
+                            android:hint="@string/cout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.9"
+                            android:background="@color/white"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnconfirm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="22dp"
+                        android:background="@drawable/circlebutton"
+                        android:text="@string/submit"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/skyblue"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:layout_weight="0.8"/>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+</RelativeLayout>

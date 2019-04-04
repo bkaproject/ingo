@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cavalerie.vlc123.gogogo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ongo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cavalerie.vlc123.gogogo.fileprovider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBZGTtMnvhEjzc4f3HOBn5VE1VqVEwERPg" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.LoginActivity" />
+        <activity
+            android:name=".Activities.SignActivity"
+            android:parentActivityName=".Activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.ProfilActivity"
+            android:label="Profil"
+            android:parentActivityName=".Activities.DashboardActivity" />
+        <activity android:name=".Dialog.ContactDialog" />
+        <activity android:name=".Activities.MapActivity" />
+        <activity
+            android:name=".Activities.HistoryActivity"
+            android:label="History"
+            android:parentActivityName=".Activities.DashboardActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activities.Sign2Activity" />
+        <activity android:name=".Write_postActivity" />
+        <activity
+            android:name=".Activities.LoadingActivity"
+            android:label="Activités en cours"
+            android:parentActivityName=".Activities.DashboardActivity"
+            android:theme="@style/AppTheme" />
+        //for facebook
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_APP_ID" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" />
+        <activity
+            android:name=".Activities.UserInformationActivity"
+            android:label="A propos"
+            android:parentActivityName=".Activities.ProfilActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activities.user_edit_information" />
+        <activity android:name=".Activities.user_PreferenceActivity"
+            android:parentActivityName=".Activities.ProfilActivity"
+            android:label="Mes préférences"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".Activities.User_AdressActivity"
+            android:parentActivityName=".Activities.ProfilActivity"
+            android:label="Mes Adresses"
+            android:theme="@style/AppTheme"/>
+    </application>
+
+</manifest>

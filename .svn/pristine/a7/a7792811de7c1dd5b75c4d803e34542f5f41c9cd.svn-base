@@ -1,0 +1,70 @@
+package com.cavalerie.vlc123.gogogo.Dashboard_fragment;
+
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+
+import com.cavalerie.vlc123.gogogo.R;
+import com.cavalerie.vlc123.gogogo.adapters.recyclerAdapter;
+import com.cavalerie.vlc123.gogogo.adapters.recyclerAdapterReservation;
+import com.cavalerie.vlc123.gogogo.model.Publication;
+import com.cavalerie.vlc123.gogogo.model.Reservation;
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ReservationFragment extends Fragment {
+
+    //MaterialBetterSpinner spregion;
+    private RecyclerView recyclerView;
+    private List<Reservation> lists = new ArrayList<>();
+
+    public ReservationFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_reservation, container, false);
+
+        //remplir les post
+        ajoutReservation();
+
+        //spregion = (MaterialBetterSpinner) v.findViewById(R.id.spregion);
+        //spregion.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerViewR);
+
+        //définit l'agencement des cellules, ici de façon verticale, comme une ListView
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        recyclerView.setAdapter(new recyclerAdapterReservation(lists));
+
+        //array adapter used to bind values in the spinner
+        //ArrayAdapter adapter = ArrayAdapter.createFromResource(this.getActivity(), R.array.region, android.R.layout.simple_spinner_dropdown_item);
+        //spregion.setAdapter(adapter);
+
+        return v;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }
+
+    private void ajoutReservation() {
+        lists.add(new Reservation("10/10/2018", "Logbessou - carrefour", "bonaberi - ndobo", "10:00", "11:00"));
+        lists.add(new Reservation("12/10/2018", "Logbessou - carrefour", "Akwa - boulangerie", "09:00", "09:40"));
+        lists.add(new Reservation("14/10/2018", "mbassong - carrefour", "bepanda - laverie", "18:00", "18:30"));
+    }
+}

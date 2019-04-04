@@ -1,0 +1,57 @@
+package com.cavalerie.vlc123.gogogo.model;
+
+public class Reservation {
+    private String txtdepart;
+    private String txtarrive;
+    private String txthdepart;
+    private String txtharrive;
+    private String datevoyage;
+
+    public Reservation(String datevoyage, String txtdepart, String txtarrive, String txthdepart, String txtharrive) {
+        this.datevoyage = datevoyage;
+        this.txtdepart = txtdepart;
+        this.txtarrive = txtarrive;
+        this.txthdepart = txthdepart;
+        this.txtharrive = txtharrive;
+    }
+
+    public String getDatevoyage() {
+        return datevoyage;
+    }
+
+    public String getTxtdepart() {
+        return txtdepart;
+    }
+
+    public String getTxtarrive() {
+        return txtarrive;
+    }
+
+    public String getTxthdepart() {
+        return txthdepart;
+    }
+
+    public String getTxtharrive() {
+        return txtharrive;
+    }
+
+    public void setTxtdepart(String txtdepart) {
+        this.txtdepart = txtdepart;
+    }
+
+    public void setTxtarrive(String txtarrive) {
+        this.txtarrive = txtarrive;
+    }
+
+    public void setTxthdepart(String txthdepart) {
+        this.txthdepart = txthdepart;
+    }
+
+    public void setTxtharrive(String txtharrive) {
+        this.txtharrive = txtharrive;
+    }
+
+    public void setDatevoyage(String datevoyage) {
+        this.datevoyage = datevoyage;
+    }
+}

@@ -1,0 +1,31 @@
+package com.cavalerie.vlc123.gogogo.adapters;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
+
+import com.cavalerie.vlc123.gogogo.R;
+import com.cavalerie.vlc123.gogogo.model.Reservation;
+
+public class ReservationViewHolder extends RecyclerView.ViewHolder{
+    private TextView txtdepart, txtarrive, txthdepart, txtharrive, txtdatevoyage;
+
+    //itemView est la vue correspondante à 1 cellule
+    public ReservationViewHolder(View itemView) {
+        super(itemView);
+
+        txtdepart = (TextView) itemView.findViewById(R.id.txtdepart);
+        txtarrive = (TextView) itemView.findViewById(R.id.txtarrive);
+        txthdepart = (TextView) itemView.findViewById(R.id.txthdepart);
+        txtharrive = (TextView) itemView.findViewById(R.id.txtharrive);
+        txtdatevoyage = (TextView) itemView.findViewById(R.id.datevoyage);
+    }
+
+    public void bind (Reservation myObject) {
+        txtdepart.setText(myObject.getTxtdepart());
+        txtarrive.setText(myObject.getTxtarrive());
+        txthdepart.setText(myObject.getTxthdepart());
+        txtharrive.setText(myObject.getTxtharrive());
+        txtdatevoyage.setText(myObject.getDatevoyage());
+    }
+}

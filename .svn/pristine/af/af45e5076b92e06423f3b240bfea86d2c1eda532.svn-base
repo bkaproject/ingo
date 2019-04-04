@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">gogogo</string>
+    <string name="google_maps_API_key">AIzaSyAf-k0QCrOuhj2pHqOe0bwcWvxZhwpdDgI</string>
+    <string name="emailE">Namcid@ymail.com</string>
+    <string name="name">on décale!</string>
+    <string name="history">Historique</string>
+    <string name="contact">Contacter nous!</string>
+    <string name="about">A propos</string>
+
+    //authentification
+    <string name="signin">SUIVANT</string>
+    <string name="signup">INSCRIPTION</string>
+    <string name="phone">votre numero de téléphone</string>
+    <string name="password">Entrer votre mot de passe</string>
+    <string name="cface">CONTINUER AVEC FACEBOOK</string>
+    <string name="cgoogle">CONTINUER AVEC GOOGLE</string>
+    <string name="txtconfirm">Un code de confirmation vous a été envoyé par SMS \n veuillez le saisir</string>
+    <string name="term">"vous etes entrain d'accepter nos "</string>
+    <string name="term1"> <u>Termes et conditions</u> </string>
+    <string name="codeconfirm">code de confirmation</string>
+    <string name="infossup">Informations supplémentaires</string>
+    <string name="firstName">Nom</string>
+    <string name="lastName">Prenom</string>
+    <string name="username">"Nom d'utilisateur"</string>
+    <string name="email"> Adresse email</string>
+    <string name="born">Date de naissance</string>
+    <string name="adresse">Adresse</string>
+    <string name="tel">Telephone</string>
+    <string name="cni">CNI</string>
+    <string name="save">se souvenir de moi</string>
+    <string name="inscript">Inscription</string>
+    <string name="inscription">inscription</string>
+    <string name="title_activity_dash_board">dashBoard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    //profil
+    <string name="profil"> Nom de profil</string>
+    <string name="edit">Voir le profil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+
+    //navigation
+    <string name="home">Accueil</string>
+    <string name="travel">Voyage</string>
+    <string name="reserve">Reservation</string>
+    <string name="tchat">Messagerie</string>
+    <string name="setting">Paramètre</string>
+    <string name="logout">Déconnexion</string>
+
+    /appbar title
+    <string-array name="nav_item_activity_titles">
+        <item>Accueil</item>
+        <item>Voyage</item>
+        <item>Reservation</item>
+        <item>Messagerie</item>
+        <item>Paramètre</item>
+        <item>Déconnexion</item>
+    </string-array>
+
+    //fonction
+    <string-array name="fonction">
+        <item>Conducteur</item>
+        <item>Passager</item>
+    </string-array>
+
+    //region
+    <string-array name="region">
+        <item>Adamaoua</item>
+        <item>Centre</item>
+        <item>Est</item>
+        <item>Extreme-Nord</item>
+        <item>Littoral</item>
+        <item>Nord</item>
+        <item>Nord-Ouest</item>
+        <item>Ouest</item>
+        <item>Sud</item>
+        <item>Sud-Ouest</item>
+    </string-array>
+
+
+    //voyage
+    <string name="start"> Lieu de départ </string>
+    <string name="end"> "Lieu d'arrivée" </string>
+    <string name="date"> Date du voyage </string>
+    <string name="hourD">"Heure de départ"</string>
+    <string name="hourA">"Heure d'arrivée"</string>
+    <string name="cout">Prix</string>
+    <string name="fonction">"Sur ce trajet, je serais :"</string>
+    <string name="place">"Nombre de place :"</string>
+    <string name="submit">Soumettre</string>
+
+    //reservation
+    <string name="regionSelect">" choisissez une region :"</string>
+
+    //home card view
+    <string name="heur">heure</string>
+    <string name="text"> "Très beau voyage Douala-kribi accompagné de mes coll-gue de travail"</string>
+    <string name="comment">Commentaire</string>
+
+    //profil
+    <string name="fon">Statut</string>
+    <string name="cno">Non défini</string>
+    <string name="profile"> Niveau du profil :</string>
+
+</resources>

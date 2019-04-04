@@ -1,0 +1,223 @@
+package com.cavalerie.vlc123.gogogo.Activity;
+
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.Animatable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.cavalerie.vlc123.gogogo.R;
+import com.cavalerie.vlc123.gogogo.model.Mysingleton;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class LoginActivity extends AppCompatActivity {
+
+    //SharedPreferences preferences;
+    //public static final String PREF = "myPref";
+    //private static String URL = "http://192.168.43.135:8000/api/user/getuser";
+
+    //TextView link_signup;
+    ImageView logo;
+    Button btnconnexion;
+    TextView txtusername;
+    TextView txtpassword;
+    RelativeLayout corps;
+    public static Animation appear, uptodown, downtoup, rotate;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_log);
+
+        //link_signup = (TextView) findViewById(R.id.link_signup);
+        btnconnexion = (Button) findViewById(R.id.btnconnexion);
+        logo = (ImageView) findViewById(R.id.logo);
+        corps = (RelativeLayout) findViewById(R.id.corps);
+
+        //animation
+        appear = AnimationUtils.loadAnimation(this, R.anim.appear);
+        uptodown = AnimationUtils.loadAnimation(this, R.anim.uptodown);
+        downtoup = AnimationUtils.loadAnimation(this, R.anim.downtoup);
+        rotate = AnimationUtils.loadAnimation(this, R.anim.rotate);
+
+        corps.startAnimation(appear);
+        logo.startAnimation(uptodown);
+        btnconnexion.startAnimation(downtoup);
+
+
+        btnconnexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent c = new Intent(LoginActivity.this, SignActivity.class);
+                startActivity(c);
+            }
+        });
+    }
+
+    /*private void login() {
+        if (!validate()) {
+            onLoginFailed();
+            return;
+        }
+
+        btnconnexion.setEnabled(false);
+
+        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
+                R.style.AppTheme);
+        progressDialog.setIndeterminate(true);
+        progressDialog.setMessage("Connexion...");
+        progressDialog.show();
+
+        final String email = txtusername.getText().toString();
+        final String password = txtpassword.getText().toString();
+
+        // TODO: Implémentation de l'authentification ma la méthode voulu!
+
+        preferences = getSharedPreferences(PREF, Context.MODE_PRIVATE);
+
+        String response = null;
+        final String finalResponse = response;
+
+        StringRequest postRequest = new StringRequest(Request.Method.POST,URL,
+                new Response.Listener<String>()
+                {
+                    @Override
+                    public void onResponse(String response) {
+                        JSONObject myResponse = new JSONObject();
+                        JSONObject tResponse = new JSONObject();
+                        JSONObject tResponseuser = new JSONObject();
+
+
+
+                        SharedPreferences.Editor edit = preferences.edit();
+                        try {
+                            myResponse = new JSONObject(response);
+                            tResponse = new JSONObject(response);
+                            tResponseuser = new JSONObject(response);
+
+                            Log.d("connection :", myResponse.getString("Connection"));
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                        try {
+                            if(myResponse.getString("Connection").toLowerCase().equals("success"))
+                            {
+
+                                edit.putString("token",tResponse.getString("token"));
+                                edit.putString("user",tResponseuser.getString("user"));
+                                edit.commit();
+                                Log.d("le shared preference :", preferences.getAll().toString());
+                                final Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
+                                startActivity(i);
+                            }
+                            else{
+                                Log.d("response","probleme de connexion");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //error
+                        Log.d("ErrorResponse",finalResponse);
+                        error.printStackTrace();
+                    }
+                }){
+            @Override
+            protected Map<String , String> getParams() throws AuthFailureError
+            {
+
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("email",email);
+                params.put("password",password);
+
+                return params;
+            }
+
+
+        };
+
+        postRequest.setRetryPolicy(new DefaultRetryPolicy(0,DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        Mysingleton.getInstance(LoginActivity.this).addToRequestqueue(postRequest);
+
+
+        /*new android.os.Handler().postDelayed(
+                new Runnable() {
+                    public void run() {
+                        // Sur appel complet soit onLoginSuccess ou onLoginFailed
+                        onLoginSuccess();
+                        // onLoginFailed();
+                        progressDialog.dismiss();
+                    }
+                }, 3000);
+    }
+
+    public void onLoginSuccess() {
+        btnconnexion.setEnabled(true);
+        finish();
+    }
+
+    public void onLoginFailed() {
+        Toast.makeText(getBaseContext(), "Connexion échoué", Toast.LENGTH_LONG).show();
+        btnconnexion.setEnabled(true);
+    } */
+
+    @Override
+    public void onBackPressed() {
+        //désactiver le retour au splashScreen
+        moveTaskToBack(true);
+    }
+
+    public boolean validate() {
+        boolean valid = true;
+
+        String email = txtusername.getText().toString();
+        String password = txtpassword.getText().toString();
+
+        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            txtusername.setError("veuillez entrer une adresse email valide");
+            valid = false;
+        } else {
+            txtusername.setError(null);
+        }
+
+        if (password.isEmpty() || password.length() < 6 || password.length() > 20) {
+            txtpassword.setError("le mot de passe doit etre compris entre 6 et 20 caractères alpha numérique");
+            valid = false;
+        } else {
+            txtpassword.setError(null);
+        }
+
+        return valid;
+    }
+}

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "395761736346",
+    "firebase_url": "https://ongo-b1k0a.firebaseio.com",
+    "project_id": "ongo-b1k0a",
+    "storage_bucket": "ongo-b1k0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395761736346:android:5ef7869ce6a2270c",
+        "android_client_info": {
+          "package_name": "com.cavalerie.vlc123.gogogo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395761736346-nlsv6qe32bag2ffgh27jg1erl2ksf0so.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cavalerie.vlc123.gogogo",
+            "certificate_hash": "46032c458cd5091386eecb8c95fb28a05e9ff2b4"
+          }
+        },
+        {
+          "client_id": "395761736346-l6531penimq1qr87iddbuukbs8s17r9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4Chg9v7p7AcVaFgEpVOgAkE8IG-26-3o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395761736346-l6531penimq1qr87iddbuukbs8s17r9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+package com.cavalerie.vlc123.gogogo.adapters;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.cavalerie.vlc123.gogogo.R;
+import com.cavalerie.vlc123.gogogo.model.Publication;
+import com.cavalerie.vlc123.gogogo.model.Reservation;
+
+import java.util.List;
+
+public class recyclerAdapter extends RecyclerView.Adapter<AccueilViewHolder> {
+    List<Publication> list;
+
+    //ajouter un constructeur prenant en entrée une liste
+    public recyclerAdapter(List<Publication> list) {
+        this.list = list;
+    }
+
+    //cette fonction permet de créer les viewHolder
+    //et par la même occasion indiquer la vue à inflater (à partir des layout xml)
+    @Override
+    public AccueilViewHolder onCreateViewHolder(ViewGroup viewGroup, int itemType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.model_post,viewGroup,false);
+        return new AccueilViewHolder(view);
+    }
+
+    //c'est ici que nous allons remplir notre cellule avec le texte/image de chaque MyObjects
+    @Override
+    public void onBindViewHolder(AccueilViewHolder myViewHolder, int position) {
+        Publication myObject = list.get(position);
+        myViewHolder.bind(myObject);
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+}

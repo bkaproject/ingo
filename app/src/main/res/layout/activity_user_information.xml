@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UserInformationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:weightSum="5"
+            android:background="@color/skyblue"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1.5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgprofil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/person"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="3.5"
+                android:paddingTop="10dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtPrStatut"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Débutant"
+                        android:textSize="18dp"
+                        android:layout_gravity="left"
+                        android:gravity="left"/>
+
+                    <TextView
+                        android:id="@+id/txtModifierProfil"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Modifier"
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textSize="18dp"
+                        android:layout_gravity="end"
+                        android:linksClickable="true"
+                        android:textColor="@color/but"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="left">
+
+                    <TextView
+                        android:id="@+id/txtPrFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CEDRIC"
+                        android:textColor="@color/black"
+                        android:inputType="textCapCharacters"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/txtPrLastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAMPA"
+                        android:textColor="@color/black"
+                        android:inputType="textCapCharacters"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtPrPassager"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="5.0dip"
+                        android:background="@drawable/circlebutton"
+                        android:backgroundTint="@color/heading"
+                        android:text="@string/Passager" />
+
+                    <TextView
+                        android:id="@+id/txtPrConducteur"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        android:background="@drawable/circlebutton"
+                        android:backgroundTint="@color/google_red"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="@string/conducteur" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.9">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtperso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="@string/infosp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/lnperso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/txtperso"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/txtemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/email"
+                            android:textColor="@color/heading"
+                            android:textSize="@dimen/libele"/>
+
+                        <TextView
+                            android:id="@+id/txtPrEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Namcid@ymail.com"
+                            android:textSize="@dimen/intitule"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/txtborn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/born"
+                            android:textColor="@color/heading"
+                            android:textSize="@dimen/libele"/>
+
+                        <TextView
+                            android:id="@+id/txtPrDateborn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="02 Octobre 1995"
+                            android:textSize="@dimen/intitule"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/txtcni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/cni"
+                            android:textColor="@color/heading"
+                            android:textSize="@dimen/libele"/>
+
+                        <TextView
+                            android:id="@+id/txtPrCni"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ISTDI16E012889"
+                            android:textSize="@dimen/intitule"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/txtphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/tel"
+                            android:textColor="@color/heading"
+                            android:textSize="@dimen/libele"/>
+
+                        <TextView
+                            android:id="@+id/txtPrTelephone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="697106152"
+                            android:textSize="@dimen/intitule"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/txtadresse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Adresse"
+                            android:textColor="@color/heading"
+                            android:textSize="@dimen/libele"/>
+
+                        <TextView
+                            android:id="@+id/txtPrAdresse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cimétière - Logbessou"
+                            android:textSize="@dimen/intitule"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lbOccupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Occupation"
+                            android:textColor="@color/heading"
+                            android:textSize="@dimen/libele"/>
+
+                        <TextView
+                            android:id="@+id/txtPrOccupation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Statisticien"
+                            android:textSize="@dimen/intitule"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- <TextView
+                    android:id="@+id/txtpref"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lnperso"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="@string/pref"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtpref"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/discussion"
+                        android:textColor="@color/heading"
+                        android:textSize="@dimen/libele"/>
+
+                    <TextView
+                        android:id="@+id/txtPrDiscution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aime"
+                        android:textSize="@dimen/intitule"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/cigarette"
+                        android:textColor="@color/heading"
+                        android:textSize="@dimen/libele"/>
+
+                    <TextView
+                        android:id="@+id/txtPrCigarette"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cigaretteNon"
+                        android:textSize="@dimen/intitule"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/musique"
+                        android:textColor="@color/heading"
+                        android:textSize="@dimen/libele"/>
+
+                    <TextView
+                        android:id="@+id/txtPrMusique"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aimePas"
+                        android:textSize="@dimen/intitule"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Object"
+                        android:textColor="@color/heading"
+                        android:textSize="@dimen/libele"/>
+
+                    <TextView
+                        android:id="@+id/txtPrObject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aimePas"
+                        android:textSize="@dimen/intitule"/>
+                </LinearLayout>
+
+            </LinearLayout> -->
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
